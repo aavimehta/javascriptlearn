@@ -1,0 +1,43 @@
+#JAVASCRIPT 
+
+Day - 01
+
+-> Java Script programs can be inserted anywhere into an HTML document using <script> tag.
+
+-> Script tag has many attributes, the two important ones that were used earlier but not now are: 
+	1) type attribute
+	2) language  
+-> If we have a lot of Java Script code we can put it in a separate file using src attribute of the script tag that contains the absolute path to the script from the root. We can also provide relative path if the file that contains the Java Script code resides in the same folder.
+ -> To attach several scripts use multiple tags.
+
+-> As a thumb of rule only simplest codes are written in the HTML document all others reside in the different files for the sake of keeping the code simple and understandable.
+
+-> The benefit of having separate files is that the browser will download it only once and store it in cache, other pages that reference the same script will refer it from the cache instead of downloading it again, which reduces the traffic and make the pages faster.
+
+-> If src tag is present the contents inside the scripts are ignored.
+
+
+
+Code : 
+
+
+<html>
+<head>
+
+</head>
+<body>
+<p> this is a paragraph </p>
+</body>
+
+<script src="hello.js"> 
+alert("Hi Avinash")
+</script>
+
+</html>
+
+
+
+
+hello.js   
+
+alert(“Bye Avinash”)
