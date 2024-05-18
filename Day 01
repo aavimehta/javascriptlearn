@@ -7,12 +7,18 @@ Day - 01
 -> Script tag has many attributes, the two important ones that were used earlier but not now are: 
 	1) type attribute
 	2) language  
--> If we have a lot of Java Script code we can put it in a separate file using src attribute of the script tag that contains the absolute path to the script from the root. We can also provide relative path if the file that contains the Java Script code resides in the same folder.
+-> If we have a lot of Java Script code we can put it in a separate file using src attribute of the script tag that 
+contains the absolute path to the script from the root. We can also provide relative path if the file that contains the 
+Java Script code resides in the same folder.
+
  -> To attach several scripts use multiple tags.
 
--> As a thumb of rule only simplest codes are written in the HTML document all others reside in the different files for the sake of keeping the code simple and understandable.
+-> As a thumb of rule only simplest codes are written in the HTML document all others reside in the different files 
+for the sake of keeping the code simple and understandable.
 
--> The benefit of having separate files is that the browser will download it only once and store it in cache, other pages that reference the same script will refer it from the cache instead of downloading it again, which reduces the traffic and make the pages faster.
+-> The benefit of having separate files is that the browser will download it only once and store it in cache, 
+other pages that reference the same script will refer it from the cache instead of downloading it again,
+which reduces the traffic and make the pages faster.
 
 -> If src tag is present the contents inside the scripts are ignored.
 
@@ -41,3 +47,31 @@ alert("Hi Avinash")
 hello.js   
 
 alert(“Bye Avinash”)
+
+
+
+The code used above had a statement alert(“blah blah blah”),
+we can have as many statements in our code as many we want, we usually use a semicolon to separate statements or 
+either we can write statements in different lines, when writing in next line javascript will use an implicit semicolon.
+
+For eg:
+
+alert(“hi Avinash”) alert(“Bye Avinash”) 
+alert(“hi Avinash”) alert(“Bye Avinash”);
+
+-> above statements will generate an error whereas the following won’t
+
+alert(“hi Avinash”); alert(“Bye Avinash”)  or alert(“hi Avinash”); alert(“Bye Avinash”);
+alert(“hi Avinash”) 
+alert(“Bye Avinash”) 
+
+Javascript is smart enough to understand that the following 
+
+alert(2 - 22  -
+45)
+
+-> The above code outputs -65. 
+-> Writing in next line does not require a implicit semicolon, it knowns that the line is ending with a 
+negative sign which implies that it will expect a number next to perform an operation, inserting an implicit semicolon by 
+javascript here will generate an error.
+
