@@ -1,0 +1,83 @@
+#VARIABLES in Java Script
+
+-> Like any other language variables in javascript are used to store information.
+-> each variable has a name associated with it so that it information stored in it can be referred to in later parts of the program and therefore 
+    we often call variables “named storage”.
+-> For example : 
+Say you wrote a program for a convenience store now we can have named storages (variables) for customer id, customer name and so on.
+
+-> to create a variable in java script a reserved keyword “let” is used as follows:
+
+let customerId;
+ customerId = 209;
+
+-> Reserved keywords are the words that have already been used by the language so you as a user can not used those reserved  
+    keywords to create variables(named storages).
+
+-> there are different ways to declare variables one can use shorthand for the above declaration if they like as follows :
+ let customerId = 209;
+
+-> you can also declare multiple variables in a single line separated by commas as is a common practice in many other languages 
+let customerId = 209, customerName = “Avinash”;
+
+
+-> Now here is the simple rule you can only declare a variable with a name only once in your program in simple terms the following lines of is incorrect :
+
+let customerName = “Avinash”;
+let customerName = “Shobhit”;
+
+-> But you can assign a variable value as many times as you want, the variable will be updated with the new value and the 
+    older value will be deleted from the storage. For example:
+
+let customerName = “Avinash”;
+customerName = “Shobhit”;
+
+
+Now if you run the following statement :
+
+alert(customerName);
+
+Avinash will be deleted from the storage and Shobhit will get stored there and you will see “Shobhit” printed there.
+
+-> The one thing that I have followed while writing the above codes if you have noticed is that I have followed CAMEL CASING
+    while declaring the variables which is a general that we follow while declaring variables in Java Script, that first letter of each word(except the initial one)  
+    is capital and all the others are smaller.
+
+-> The other rule is that a variable name can only have letter or digits and also can have the symbols $ and _.
+
+-> The first character of a variable name can not be a digit.
+
+-> The following declarations are considered in correct in JavaScript: 
+
+let 2-customer;
+
+-> Neither can a variable name start with a digit nor can it have symbols other than $ and _ .
+
+-> JavaScript is a Case Sensitive language so,
+
+let customer_name = “Avinash”;
+let CUSTOMER_name  = “Shobhit”;
+
+Is a valid declaration, although the one used above is not a good practice, I have just used it just for the purpose of illustration.
+
+
+#CONSTANTS IN Java Script
+
+-> There could be a case that we do not want a name storage to change its value through out the program execution once it is assigned a value,   
+  no matter whether the value is assigned implicitly or explicitly, such variables are declared using const keyword in java script instead of let keyword as used above.
+  For example we don’t want the value of customer_id to be changed once it has been assigned so use the following declaration.
+
+const CUSTOMER_ID = 01;
+
+Now, 
+
+const customer_id;
+
+If we include both the lines in our program it won’t throw an error since javascript is a case sensitive language and both of them represent different named storages, 
+  but the question is which one is better to use? 
+
+-> The answer to above question will be that we use all letter capitalized when we have to explicitly assign the value to a constant, 
+whereas the second one is used when the value to the constant will be assigned during execution and we want it to remain same throughout the execution of the program.
+
+-> It always a best practice to name variables and constant with meaningful names so that it makes sense to the another person who is reading your code even after years, 
+hence it should be clear and should tell what it stores, it is not a good practice to name your variables as a, b, c as they make no sense in regards of the program.
